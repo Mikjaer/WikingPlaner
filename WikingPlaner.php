@@ -14,20 +14,7 @@
 
 Diz iz magic
 */
-function wpw_lists_settings($key)
-{
-	$settings["MenuName"]="Redaktion";
-	$settings["prefix"] = $prefix = "wpwp_";
-
-	$settings["Lists"][] = array("name"=>"Episoder","slug"=> $prefix."podcasts");
-	$settings["Lists"][] = array("name"=>"Kilder: Events","slug"=> $prefix."events");
-	$settings["Lists"][] = array("name"=>"Kilder: Nyheder","slug"=> $prefix."news");
-	$settings["Lists"][] = array("name"=>"Liste: Pot. gster", "slug"=> $prefix."guests");
-	$settings["Lists"][] = array("name"=>"Liste: Indslag", "slug"=> $prefix."indslag");
-	$settings["Lists"][] = array("name"=>"Liste: TODO", "slug"=> $prefix."todo");
-
-	return $settings[$key];
-} 
+include("config.php"); 
 
 include( plugin_dir_path( __FILE__ ) ."/post-type-switcher.php");
 
